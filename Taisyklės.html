@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="mcera.lt - Minecraft serverio paslaugos ir privilegijos">
-    <title>MCERA | Paslaugos</title>
+    <meta name="description" content="mcera.lt - Minecraft serverio taisyklės">
+    <title>MCERA | Taisyklės</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -64,66 +64,58 @@
             color: var(--primary-color);
         }
 
-        .shop-container {
+        .rules-container {
             max-width: 1200px;
             margin: 100px auto;
             padding: 2rem;
         }
 
-        .shop-title {
+        .rules-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
             color: var(--primary-color);
         }
 
-        .shop-items {
+        .rules-sections {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .shop-item {
+        .rules-section {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 2rem;
-            text-align: center;
             transition: transform 0.3s;
         }
 
-        .shop-item:hover {
+        .rules-section:hover {
             transform: translateY(-10px);
         }
 
-        .item-title {
+        .section-title {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--primary-color);
+            text-align: center;
         }
 
-        .item-price {
-            font-size: 2rem;
-            margin: 1rem 0;
+        .rules-list {
+            list-style-type: none;
         }
 
-        .item-description {
-            margin-bottom: 1.5rem;
+        .rules-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
         }
 
-        .buy-button {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .buy-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px var(--primary-color);
+        .rules-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
         }
 
         @media (max-width: 768px) {
@@ -131,7 +123,7 @@
                 display: none;
             }
             
-            .shop-title {
+            .rules-title {
                 font-size: 2rem;
             }
         }
@@ -147,51 +139,45 @@
                 <a href="https://discord.gg/n576RsXZFD">Discordas</a>
                 <a href="#bans">Banai</a>
                 <a href="#vote">Balsai</a>
-                
             </div>
         </div>
     </nav>
 
-    <div class="shop-container">
-        <h1 class="shop-title">Serverio Paslaugos</h1>
+    <div class="rules-container">
+        <h1 class="rules-title">Serverio Taisyklės</h1>
         
-        <div class="shop-items">
-            <div class="shop-item">
-                <h2 class="item-title">VIP Privilegijos</h2>
-                <div class="item-price">1€</div>
-                <p class="item-description">
-                    - Specialus [VIP] prefiksas<br>
-                    - Papildomi teleportacijos taškai<br>
-                    - Prieiga prie /kit VIP<br>
-                    - Spalvotas chat'as
-                </p>
-                <button class="buy-button">Pirkti</button>
+        <div class="rules-sections">
+            <div class="rules-section">
+                <h2 class="section-title">Bendrosios Taisyklės</h2>
+                <ul class="rules-list">
+                    <li>Draudžiama naudoti įžeidžiančius žodžius</li>
+                    <li>Draudžiama reklamuoti kitus serverius</li>
+                    <li>Draudžiama apsimetinėti administracija</li>
+                    <li>Privaloma gerbti kitus žaidėjus</li>
+                    <li>Draudžiama spaminti pokalbių kanale</li>
+                </ul>
             </div>
 
-            <div class="shop-item">
-                <h2 class="item-title">MVP Privilegijos</h2>
-                <div class="item-price">2€</div>
-                <p class="item-description">
-                    - Specialus [MVP] prefiksas<br>
-                    - Visi VIP privalumai<br>
-                    - Daugiau teleportacijos taškų<br>
-                    - Prieiga prie /kit MVP<br>
-                    - Specialūs efektai
-                </p>
-                <button class="buy-button">Pirkti</button>
+            <div class="rules-section">
+                <h2 class="section-title">Žaidimo Taisyklės</h2>
+                <ul class="rules-list">
+                    <li>Draudžiama naudoti modifikacijas (hack'us)</li>
+                    <li>Draudžiama naudoti X-Ray tekstūras</li>
+                    <li>Draudžiama griefinti kitų žaidėjų statinius</li>
+                    <li>Draudžiama vogti iš kitų žaidėjų</li>
+                    <li>Privaloma pranešti apie pastebėtus pažeidimus</li>
+                </ul>
             </div>
 
-            <div class="shop-item">
-                <h2 class="item-title">Premium Privilegijos</h2>
-                <div class="item-price">2€</div>
-                <p class="item-description">
-                    - Specialus [PREMIUM] prefiksas<br>
-                    - Visi MVP privalumai<br>
-                    - Neriboti teleportacijos taškai<br>
-                    - Prieiga prie visų /kit<br>
-                    - Specialūs komandų blokai
-                </p>
-                <button class="buy-button">Pirkti</button>
+            <div class="rules-section">
+                <h2 class="section-title">Bausmės</h2>
+                <ul class="rules-list">
+                    <li>Pirmasis įspėjimas - žodinis perspėjimas</li>
+                    <li>Antrasis įspėjimas - laikinas užtildymas</li>
+                    <li>Trečiasis įspėjimas - laikinas užblokavimas</li>
+                    <li>Ketvirtas įspėjimas - permanentinis užblokavimas</li>
+                    <li>Rimti pažeidimai - iškart permanentinis užblokavimas</li>
+                </ul>
             </div>
         </div>
     </div>
